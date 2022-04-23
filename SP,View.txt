@@ -1,0 +1,32 @@
+create VIEW [dbo].[Get_Subscribes]
+AS
+SELECT  TENCN=PUBS.description, TENSERVER= subscriber_server
+   FROM dbo.sysmergepublications PUBS,  dbo.sysmergesubscriptions SUBS
+   WHERE PUBS.pubid= SUBS.PUBID  AND PUBS.publisher <> SUBS.subscriber_server AND subscriber_server<>'DESKTOP-Q6N4J46\S3'
+
+create PROC [dbo].[SP_InfoTeacher]
+@TENLOGIN NVARCHAR (50)
+AS
+DECLARE @TENUSER NVARCHAR(50)
+SELECT @TENUSER=NAME FROM sys.sysusers WHERE sid = SUSER_SID(@TENLOGIN)
+ SELECT USERNAME = @TENUSER, 
+  HOTEN = (SELECT HO+ ' '+ TEN FROM GIAOVIEN  WHERE MAGV = @TENUSER ),
+   NAME
+   FROM sys.sysusers 
+   WHERE UID = (SELECT GROUPUID 
+                 FROM SYS.SYSMEMBERS 
+               WHERE MEMBERUID= (SELECT UID FROM sys.sysusers  WHERE NAME=@TENUSER))
+
+create PROC [dbo].[SP_InfoStudent] 
+@MASV CHAR (8),
+@PASS VARCHAR(16)
+AS
+DECLARE @TENUSER NVARCHAR(50)
+SELECT @TENUSER=NAME FROM sys.sysusers WHERE sid = SUSER_SID('student')
+SELECT USERNAME = @TENUSER, 
+  HOTEN = (SELECT HO+ ' '+ TEN FROM SINHVIEN  WHERE MASV = @MASV AND MATKHAU = @PASS),
+   NAME
+   FROM sys.sysusers 
+   WHERE UID = (SELECT GROUPUID 
+                 FROM SYS.SYSMEMBERS 
+               WHERE MEMBERUID= (SELECT UID FROM sys.sysusers  WHERE NAME=@TENUSER))

@@ -1,0 +1,398 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78D37410-1EC9-4A78-BD01-6BC088BEF976}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>THITN</RootNamespace>
+    <AssemblyName>THITN</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v19.2" />
+    <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.2" />
+    <Reference Include="DevExpress.DataAccess.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.2.Core" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Export, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.2" />
+    <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.2" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core" />
+    <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.2" />
+    <Reference Include="DevExpress.XtraGauges.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.2.Extensions, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DSExam.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSExam.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsFaculty_class.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFaculty_class.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSRegisterTeacher.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSRegisterTeacher.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSStudent.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSStudent.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSSubject.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSSubject.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSTeacher.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSTeacher.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSTopic.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSTopic.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormBeforeExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBeforeExam.Designer.cs">
+      <DependentUpon>FormBeforeExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangePass.Designer.cs">
+      <DependentUpon>FormChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateLogin.Designer.cs">
+      <DependentUpon>FormCreateLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExam.Designer.cs">
+      <DependentUpon>FormExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFaculty_Class.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFaculty_Class.Designer.cs">
+      <DependentUpon>FormFaculty_Class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGetTranscript.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGetTranscript.Designer.cs">
+      <DependentUpon>FormGetTranscript.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegisterTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegisterTeacher.Designer.cs">
+      <DependentUpon>FormRegisterTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStudent.Designer.cs">
+      <DependentUpon>FormStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSubject.Designer.cs">
+      <DependentUpon>FormSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTeacher.Designer.cs">
+      <DependentUpon>FormTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTopic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTopic.Designer.cs">
+      <DependentUpon>FormTopic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGetExamResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGetExamResult.Designer.cs">
+      <DependentUpon>FormGetExamResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frpt_GetReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frpt_GetReport.Designer.cs">
+      <DependentUpon>Frpt_GetReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoExam.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionExam.cs" />
+    <Compile Include="SqlFunction.cs" />
+    <Compile Include="Xrpt_GetReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Xrpt_GetReport.Designer.cs">
+      <DependentUpon>Xrpt_GetReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xrpt_GetTranscript.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Xrpt_GetTranscript.Designer.cs">
+      <DependentUpon>Xrpt_GetTranscript.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xtrp_GetExamResult.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Xtrp_GetExamResult.Designer.cs">
+      <DependentUpon>Xtrp_GetExamResult.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormBeforeExam.resx">
+      <DependentUpon>FormBeforeExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangePass.resx">
+      <DependentUpon>FormChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateLogin.resx">
+      <DependentUpon>FormCreateLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExam.resx">
+      <DependentUpon>FormExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFaculty_Class.resx">
+      <DependentUpon>FormFaculty_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGetTranscript.resx">
+      <DependentUpon>FormGetTranscript.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegisterTeacher.resx">
+      <DependentUpon>FormRegisterTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStudent.resx">
+      <DependentUpon>FormStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSubject.resx">
+      <DependentUpon>FormSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTeacher.resx">
+      <DependentUpon>FormTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTopic.resx">
+      <DependentUpon>FormTopic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGetExamResult.resx">
+      <DependentUpon>FormGetExamResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frpt_GetReport.resx">
+      <DependentUpon>Frpt_GetReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Xrpt_GetReport.resx">
+      <DependentUpon>Xrpt_GetReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xrpt_GetTranscript.resx">
+      <DependentUpon>Xrpt_GetTranscript.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xtrp_GetExamResult.resx">
+      <DependentUpon>Xtrp_GetExamResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="DSExam.xsc">
+      <DependentUpon>DSExam.xsd</DependentUpon>
+    </None>
+    <None Include="DSExam.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSExam.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSExam.xss">
+      <DependentUpon>DSExam.xsd</DependentUpon>
+    </None>
+    <None Include="dsFaculty_class.xsc">
+      <DependentUpon>dsFaculty_class.xsd</DependentUpon>
+    </None>
+    <None Include="dsFaculty_class.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFaculty_class.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsFaculty_class.xss">
+      <DependentUpon>dsFaculty_class.xsd</DependentUpon>
+    </None>
+    <None Include="DSRegisterTeacher.xsc">
+      <DependentUpon>DSRegisterTeacher.xsd</DependentUpon>
+    </None>
+    <None Include="DSRegisterTeacher.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSRegisterTeacher.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSRegisterTeacher.xss">
+      <DependentUpon>DSRegisterTeacher.xsd</DependentUpon>
+    </None>
+    <None Include="DSStudent.xsc">
+      <DependentUpon>DSStudent.xsd</DependentUpon>
+    </None>
+    <None Include="DSStudent.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSStudent.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSStudent.xss">
+      <DependentUpon>DSStudent.xsd</DependentUpon>
+    </None>
+    <None Include="DSSubject.xsc">
+      <DependentUpon>DSSubject.xsd</DependentUpon>
+    </None>
+    <None Include="DSSubject.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSSubject.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSSubject.xss">
+      <DependentUpon>DSSubject.xsd</DependentUpon>
+    </None>
+    <None Include="DSTeacher.xsc">
+      <DependentUpon>DSTeacher.xsd</DependentUpon>
+    </None>
+    <None Include="DSTeacher.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSTeacher.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSTeacher.xss">
+      <DependentUpon>DSTeacher.xsd</DependentUpon>
+    </None>
+    <None Include="DSTopic.xsc">
+      <DependentUpon>DSTopic.xsd</DependentUpon>
+    </None>
+    <None Include="DSTopic.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSTopic.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSTopic.xss">
+      <DependentUpon>DSTopic.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erase_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_property_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compose_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync_50px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
